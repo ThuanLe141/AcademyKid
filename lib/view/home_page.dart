@@ -1,5 +1,8 @@
+import 'package:academykid/common_widget/button_outline_widget.dart';
+import 'package:academykid/common_widget/button_widget.dart';
 import 'package:academykid/common_widget/content_text.dart';
 import 'package:academykid/common_widget/title_text.dart';
+import 'package:academykid/view/login_page.dart';
 import 'package:academykid/view/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -66,49 +69,23 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ],
                   ),
-                  ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xff06c927),
-                          fixedSize: const Size(240, 40),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(50))),
-                      child: ContentText(
-                          colorContent: Colors.white,
-                          content: "Login",
-                          sizeContent: 22,
-                          weightContent: FontWeight.w900)),
-                  OutlinedButton(
+                  ButtonCommonWidget(
+                      onPressed: () {
+                        Get.to(() => Login());
+                      },
+                      buttonContent: "Login",
+                      widthButton: 240,
+                      heightButton: 40,
+                      buttonColor: Color(0xff06c927),
+                      textColor: Colors.white),
+                  OutlineButtonCommonWidget(
                     onPressed: () {
-                      Get.to(() => SignUp());
+                      Get.to(SignUp());
                     },
-                    style: ElevatedButton.styleFrom(
-                        // backgroundColor: Colors.pink,
-                        fixedSize: const Size(240, 40),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(50))),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.email,
-                          color: Color(0xFF0F3D57),
-                          size: 20.0,
-                        ),
-                        Text(
-                          'Sign up with Email',
-                          style: GoogleFonts.signikaNegative(
-                              textStyle:
-                                  Theme.of(context).textTheme.displayLarge,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w700,
-                              fontStyle: FontStyle.normal,
-                              letterSpacing: 0.2,
-                              color: Color(0xFF0F3D57)),
-                        ),
-                      ],
-                    ),
-                  ),
+                    buttonContent: 'Sign up with Email',
+                    widthButton: 240,
+                    heightButton: 40,
+                  )
                 ],
               ),
             ); //rest of your landscape code)

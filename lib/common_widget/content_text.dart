@@ -8,12 +8,13 @@ Text ContentText(
     required FontWeight weightContent}) {
   return Text(
     content,
+    textAlign: TextAlign.center,
     style: GoogleFonts.exo2(
-        // textStyle: Theme.of(context).textTheme.displayLarge,
-        fontSize: sizeContent,
-        fontWeight: weightContent,
-        fontStyle: FontStyle.normal,
-        letterSpacing: 0.2,
-        color: colorContent),
+      fontSize: sizeContent,
+      fontWeight: weightContent,
+      fontStyle: FontStyle.normal,
+      letterSpacing: 0.2,
+      color: colorContent,
+    ),
   );
 }

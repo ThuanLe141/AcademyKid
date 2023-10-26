@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 Text TitleText(
-    {required Color colorTitle,
+    {Color colorTitle = const Color(0xFF0F3D57),
     required String contentTitle,
     required double sizeTitle,
     required FontWeight weightTitle}) {
@@ -17,3 +17,4 @@ Text TitleText(
         color: colorTitle),
   );
 }
+//Color(0xFF0F3D57)
