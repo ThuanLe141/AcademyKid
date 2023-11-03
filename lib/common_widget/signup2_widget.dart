@@ -1,4 +1,3 @@
-import 'package:academykid/common_widget/circle_avatar_widget.dart';
 import 'package:academykid/common_widget/number_button_widget.dart';
 import 'package:academykid/common_widget/title_text.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +12,7 @@ class SignUpWidget2 extends StatefulWidget {
 class _SignUpWidget2State extends State<SignUpWidget2> {
   @override
   Widget build(BuildContext context) {
-    double maxWidth = MediaQuery.sizeOf(context).width;
+    // double maxWidth = MediaQuery.sizeOf(context).width;
     double maxheight = MediaQuery.sizeOf(context).height;
 
     return Column(

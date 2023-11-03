@@ -1,11 +1,9 @@
 import 'package:academykid/common_widget/appbar_widget.dart';
-import 'package:academykid/common_widget/content_text.dart';
 import 'package:academykid/common_widget/textfield_widget.dart';
 import 'package:academykid/common_widget/title_text.dart';
 import 'package:academykid/view/account_management_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});

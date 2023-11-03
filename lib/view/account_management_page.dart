@@ -1,9 +1,6 @@
-import 'package:academykid/common_widget/appbar_widget.dart';
 import 'package:academykid/common_widget/border_circle_avatar_widget.dart';
-import 'package:academykid/common_widget/circle_avatar_widget.dart';
 import 'package:academykid/common_widget/title_text.dart';
 import 'package:academykid/view/home_page.dart';
-import 'package:academykid/view/welcome_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

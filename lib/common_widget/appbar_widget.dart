@@ -1,6 +1,5 @@
 import 'package:academykid/common_widget/title_text.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 AppBar AppbarCommonWidget({
   required Function() onTapBackFunction,

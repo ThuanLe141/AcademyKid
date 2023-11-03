@@ -5,7 +5,6 @@ import 'package:academykid/common_widget/title_text.dart';
 import 'package:academykid/view/signup_verify_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});

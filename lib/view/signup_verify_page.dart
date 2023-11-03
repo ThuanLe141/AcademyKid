@@ -1,12 +1,9 @@
 import 'package:academykid/common_widget/appbar_widget.dart';
 import 'package:academykid/common_widget/button_widget.dart';
 import 'package:academykid/common_widget/content_text.dart';
-import 'package:academykid/common_widget/textfield_widget.dart';
-import 'package:academykid/common_widget/title_text.dart';
 import 'package:academykid/view/signup_proc_page.dart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SignUpVerify extends StatefulWidget {
   const SignUpVerify({super.key});

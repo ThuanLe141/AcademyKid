@@ -1,29 +1,6 @@
 import 'package:academykid/common_widget/content_text.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:get/get.dart';
 
-// ElevatedButton ButtonCommonWidget({
-//   required Function() onPressed,
-//   required String buttonContent,
-//   required double widthButton,
-//   required double heightButton,
-//   required Color buttonColor,
-//   required Color textColor,
-// }) {
-//   return ElevatedButton(
-//       onPressed: onPressed,
-//       style: ElevatedButton.styleFrom(
-//           backgroundColor: buttonColor,
-//           fixedSize: Size(widthButton, heightButton),
-//           shape:
-//               RoundedRectangleBorder(borderRadius: BorderRadius.circular(50))),
-//       child: ContentText(
-//           colorContent: textColor,
-//           content: buttonContent,
-//           sizeContent: 22,
-//           weightContent: FontWeight.w900));
-// }
 class ButtonCommonWidget extends StatefulWidget {
   final Function() onPressed;
   final String buttonContent;
