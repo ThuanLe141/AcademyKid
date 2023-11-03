@@ -5,11 +5,10 @@ import 'package:get/get_core/src/get_main.dart';
 AppBar AppbarCommonWidget({
   required Function() onTapBackFunction,
   required Function() onTapForwardFunction,
-  String firstText = 'Academy',
-  String secondText = 'Kids',
+  String firstText = 'Kids',
+  String secondText = 'Education',
 }) {
   return AppBar(
-    // backgroundColor: Color(0xFF8BD0E9),
     automaticallyImplyLeading: false,
     title: Container(
       margin: const EdgeInsets.only(top: 15),
@@ -20,35 +19,31 @@ AppBar AppbarCommonWidget({
             children: [
               SizedBox.fromSize(
                 size: Size(40, 40), // button width and height
-                child: ClipOval(
-                  child: Material(
-                    color: Color(0xFF0F3D57), // button color
+                child: CircleAvatar(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(40),
+                      color: Color(0xFF0F3D57),
+                    ),
+                    alignment: Alignment.center,
                     child: InkWell(
-                      // splashColor: Color(0xff06c927), // splash color
                       onTap: onTapBackFunction, // button pressed
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Icon(
-                            Icons.arrow_back,
-                            color: Colors.white,
-                            size: 30,
-                          ), // icon
-                        ],
+                      child: Icon(
+                        Icons.arrow_back,
+                        color: Colors.white,
+                        size: 30,
                       ),
                     ),
                   ),
                 ),
               ),
-              Visibility(
-                child: Container(
-                  margin: EdgeInsets.only(left: 10),
-                  child: TitleText(
-                      colorTitle: Color(0xFF0F3D57),
-                      contentTitle: 'Back',
-                      sizeTitle: 20,
-                      weightTitle: FontWeight.w700),
-                ),
+              Container(
+                margin: EdgeInsets.only(left: 10),
+                child: TitleText(
+                    colorTitle: Color(0xFF0F3D57),
+                    contentTitle: 'Back',
+                    sizeTitle: 20,
+                    weightTitle: FontWeight.w700),
               )
             ],
           ),

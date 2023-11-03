@@ -19,34 +19,37 @@ class NumberButtonWidget extends StatelessWidget {
     // required this.contentColor,
     this.contentSize = 22,
     this.contentWeight = FontWeight.w700,
-    this.borderColor = Colors.black,
-    this.borderWidth = 2.0,
+    this.borderColor = const Color(0xFF0F3D57),
+    this.borderWidth = 2.5,
     this.avatarRadius = 23,
   });
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTapFunction,
-      child: Container(
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          border: Border.all(
-            color: borderColor,
-            width: borderWidth,
+    return Container(
+      margin: EdgeInsets.all(5),
+      child: GestureDetector(
+        onTap: onTapFunction,
+        child: Container(
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            border: Border.all(
+              color: borderColor,
+              width: borderWidth,
+            ),
           ),
-        ),
-        child: CircleAvatar(
-          backgroundColor: backgroundColor,
-          radius: avatarRadius,
           child: CircleAvatar(
             backgroundColor: backgroundColor,
             radius: avatarRadius,
-            child: ContentText(
-              colorContent: Color(0xFF0F3D57),
-              content: content,
-              sizeContent: contentSize,
-              weightContent: contentWeight,
+            child: CircleAvatar(
+              backgroundColor: backgroundColor,
+              radius: avatarRadius,
+              child: ContentText(
+                colorContent: Color(0xFF0F3D57),
+                content: content,
+                sizeContent: contentSize,
+                weightContent: contentWeight,
+              ),
             ),
           ),
         ),

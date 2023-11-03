@@ -2,6 +2,7 @@ import 'package:academykid/common_widget/appbar_widget.dart';
 import 'package:academykid/common_widget/content_text.dart';
 import 'package:academykid/common_widget/textfield_widget.dart';
 import 'package:academykid/common_widget/title_text.dart';
+import 'package:academykid/view/account_management_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,13 +21,13 @@ class _SignUpState extends State<Login> {
     double maxheight = MediaQuery.sizeOf(context).height;
 
     return Scaffold(
-        appBar: AppbarCommonWidget(
-            onTapBackFunction: () {
-              Get.back();
-            },
-            onTapForwardFunction: () {}),
+        appBar: AppbarCommonWidget(onTapBackFunction: () {
+          Get.back();
+        }, onTapForwardFunction: () {
+          Get.to(() => AccountManagement());
+        }),
         body: Container(
-          margin: EdgeInsets.only(top: maxheight * 0.06),
+          margin: EdgeInsets.only(top: maxheight * 0.08),
           width: maxWidth,
           height: maxheight,
           child: Column(

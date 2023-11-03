@@ -27,7 +27,7 @@ class _SignUpState extends State<SignUp> {
           Get.to(() => SignUpVerify());
         }),
         body: Container(
-          margin: EdgeInsets.only(top: maxheight * 0.04),
+          margin: EdgeInsets.only(top: maxheight * 0.08),
           width: maxWidth,
           height: maxheight,
           child: Column(

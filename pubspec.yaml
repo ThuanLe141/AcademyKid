@@ -1,5 +1,5 @@
 name: academykid
-description: A new Flutter project.
+description: Kid Education.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -37,7 +37,6 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: ^4.6.6
   google_fonts: ^6.1.0
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -65,12 +64,18 @@ flutter:
     - assets/logo.png
     - assets/img1.png
     - assets/img2.png
+    - assets/img3.png
+    - assets/question_boy.png
     - assets/waitingmail_img.png
+    - assets/background.png
+    - assets/playicon.png
+    # avartar
     - assets/avatars/avatar1.png
     - assets/avatars/avatar2.png
     - assets/avatars/avatar3.png
-    - assets/avatars/avatar4.png
-    - assets/avatars/avatar5.png
+
+
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

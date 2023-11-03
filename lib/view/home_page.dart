@@ -1,12 +1,10 @@
-import 'package:academykid/common_widget/button_outline_widget.dart';
-import 'package:academykid/common_widget/button_widget.dart';
-import 'package:academykid/common_widget/content_text.dart';
+import 'package:academykid/common_widget/border_circle_avatar_widget.dart';
 import 'package:academykid/common_widget/title_text.dart';
-import 'package:academykid/view/login_page.dart';
-import 'package:academykid/view/signup_page.dart';
+import 'package:academykid/view/account_management_page.dart';
+import 'package:academykid/view/game/reading_game/home_page.dart';
+import 'package:academykid/view/library_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -20,79 +18,115 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     double maxWidth = MediaQuery.sizeOf(context).width;
     double maxheight = MediaQuery.sizeOf(context).height;
-
     return Scaffold(
-      body: OrientationBuilder(
-        builder: (context, orientation) {
-          if (orientation == Orientation.landscape) {
-            return Container(
-              height: maxheight,
-              width: maxWidth,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
+      body: Container(
+        padding: EdgeInsets.only(
+            top: maxheight * 0.02,
+            left: maxheight * 0.04,
+            right: maxheight * 0.04),
+        child: Column(
+          children: [
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+              Container(
+                width: maxWidth * 0.3,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Get.to(() => LibraryPage());
+                      },
+                      child: Image.asset(
+                        'assets/img3.png',
+                        width: maxheight * 0.15,
+                        height: maxheight * 0.15,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Row(
                 children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
+                  Image.asset(
+                    'assets/logo.png',
+                    height: maxheight * 0.23,
+                    width: maxheight * 0.25,
+                  ),
+                  TitleText(
+                      contentTitle: 'Kids',
+                      sizeTitle: 28,
+                      colorTitle: Color(0xff06c927),
+                      weightTitle: FontWeight.w700),
+                  Container(
+                    margin: EdgeInsets.only(left: 10),
+                    child: TitleText(
+                        contentTitle: 'Education',
+                        sizeTitle: 28,
+                        weightTitle: FontWeight.w700),
+                  ),
+                ],
+              ),
+              InkWell(
+                onTap: () {
+                  Get.to(() => AccountManagement());
+                },
+                child: Container(
+                  width: maxWidth * 0.3,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Container(
-                        alignment: Alignment.center, // use aligment
-                        child: Image.asset('assets/logo.png',
-                            height: 100, width: 100, fit: BoxFit.cover),
+                        margin: EdgeInsets.only(right: 5),
+                        child: TitleText(
+                            contentTitle: 'Username',
+                            sizeTitle: 18,
+                            weightTitle: FontWeight.w700),
                       ),
-                      Column(
-                        children: [
-                          Row(
-                            children: [
-                              Container(
-                                  margin: EdgeInsets.only(right: 12),
-                                  child: TitleText(
-                                      colorTitle: Color(0xFF0F3D57),
-                                      contentTitle: 'Academy',
-                                      sizeTitle: 30,
-                                      weightTitle: FontWeight.w700)),
-                              TitleText(
-                                  colorTitle: Color(0xff06c927),
-                                  contentTitle: 'Kids',
-                                  sizeTitle: 30,
-                                  weightTitle: FontWeight.w700)
-                            ],
-                          ),
-                          ContentText(
-                              colorContent: Colors.black54,
-                              content:
-                                  'Inspire of lifetime of learning and discovery!',
-                              sizeContent: 16,
-                              weightContent: FontWeight.w300),
-                        ],
+                      BorderCircleAvatarWidget(
+                        sizeBorder1: maxWidth * 0.04,
+                        sizeBorder2: maxWidth * 0.035,
+                        sizeBorder3: maxWidth * 0.03,
+                        sizeBorder4: maxWidth * 0.04,
+                        linkAssetsAvartar: 'assets/avatars/avatar1.png',
                       ),
                     ],
                   ),
-                  ButtonCommonWidget(
-                      onPressed: () {
-                        Get.to(() => Login());
-                      },
-                      buttonContent: "Login",
-                      widthButton: 240,
-                      heightButton: 40,
-                      buttonColor: Color(0xff06c927),
-                      textColor: Colors.white),
-                  OutlineButtonCommonWidget(
-                    onPressed: () {
-                      Get.to(SignUp());
-                    },
-                    buttonContent: 'Sign up with Email',
-                    widthButton: 240,
-                    heightButton: 40,
-                  )
+                ),
+              ),
+            ]),
+            GestureDetector(
+              onTap: () {
+                Get.to(() => HomePageReadingGame());
+              },
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Image.asset(
+                    'assets/background.png',
+                    width: maxWidth * 0.48,
+                    height: maxheight * 0.7,
+                  ),
+                  Column(
+                    children: [
+                      BorderCircleAvatarWidget(
+                          sizeBorder1: maxWidth * 0.06,
+                          sizeBorder2: maxWidth * 0.055,
+                          sizeBorder3: maxWidth * 0.052,
+                          sizeBorder4: maxWidth * 0.04,
+                          colorBackground: Color(0xff06c927),
+                          linkAssetsAvartar: 'assets/playicon.png'),
+                      TitleText(
+                          contentTitle: 'PLAY',
+                          sizeTitle: 42,
+                          colorTitle: Color(0xff06c927),
+                          weightTitle: FontWeight.w800)
+                    ],
+                  ),
                 ],
               ),
-            ); //rest of your landscape code)
-          } else {
-            return SingleChildScrollView(); //rest of you portrait code)
-          }
-        },
+            ),
+          ],
+        ),
       ),
     );
   }

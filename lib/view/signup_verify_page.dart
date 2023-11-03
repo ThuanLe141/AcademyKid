@@ -3,7 +3,7 @@ import 'package:academykid/common_widget/button_widget.dart';
 import 'package:academykid/common_widget/content_text.dart';
 import 'package:academykid/common_widget/textfield_widget.dart';
 import 'package:academykid/common_widget/title_text.dart';
-import 'package:academykid/view/signup_info_page.dart';
+import 'package:academykid/view/signup_proc_page.dart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -25,7 +25,7 @@ class _SignUpState extends State<SignUpVerify> {
         appBar: AppbarCommonWidget(onTapBackFunction: () {
           Get.back();
         }, onTapForwardFunction: () {
-          Get.to(() => SignUpInfo());
+          Get.to(() => SignUpProc());
         }),
         body: Container(
           margin: EdgeInsets.only(top: maxheight * 0.04),
@@ -37,8 +37,8 @@ class _SignUpState extends State<SignUpVerify> {
               children: [
                 Image.asset(
                   'assets/waitingmail_img.png',
-                  width: maxWidth * 0.3,
-                  height: maxheight * 0.4,
+                  width: maxWidth * 0.2,
+                  height: maxWidth * 0.2,
                   fit: BoxFit.fill,
                 ),
                 ContentText(
